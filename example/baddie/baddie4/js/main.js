@@ -123,9 +123,9 @@ Good luck!
 
     // -------------------------------------------
     // ASSIGNMENT
-    // Try out turn() and move()
+    // Try out turn() and moveTo()
     // Call on turn() to see that baddies does turn (default start is facing right)
-    // Call on move() with parameters to move baddie to a given position (default is 0,0)
+    // Call on moveTo() with parameters to move baddie to a given position (default is 0,0)
 
 
 
