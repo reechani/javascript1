@@ -388,4 +388,16 @@ Good luck!
     });
 
 
+    // -------------------------------------------
+    // ASSIGNMENT
+    // Add code to myBaddie so that he turns automatically when moving
+
+
+
+    // -------------------------------------------
+    // EXTRA ASSIGNMENT
+    // Add code so that baddie can push the boxes (tile 12)
+    // You decide yourself where to add that code, and how it should work
+
+
 }());
