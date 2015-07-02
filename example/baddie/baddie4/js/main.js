@@ -390,14 +390,16 @@ Good luck!
 
     // -------------------------------------------
     // ASSIGNMENT
-    // Add code to myBaddie so that he turns automatically when moving
-
+    // Add code to so that baddie turns automatically when moving
+    // You might need to change some of the code to make it work - try different solutions out
+    // Make sure to write about how you solved it!
 
 
     // -------------------------------------------
     // EXTRA ASSIGNMENT
     // Add code so that baddie can push the boxes (tile 12)
     // You decide yourself where to add that code, and how it should work
+    // Make sure to write about how you solved it!
 
 
 }());
