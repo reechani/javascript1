@@ -57,7 +57,7 @@ Good luck!
          * @param  {string} img      Src for image to use as baddie
          */
         init: function(position, size, element, img) {
-            console.log("Called with:", position, size, element, img);
+            console.log("init() for baddie called with the following parameters:", position, size, element, img);
             // -------------------------------------------
             // ASSIGNMENT
             // Transfer parameters to the object properties
@@ -72,6 +72,8 @@ Good luck!
             this.element.style.backgroundImage = "url(" + this.img + ")";
             this.element.style.backgroundSize = this.size.width + "px " + this.size.height + "px";
             this.element.classList.add("right");
+
+            console.log("Baddie size set to", this.element.style.width, this.element.style.height);
 
             // Finally, draw the finished baddie
             this.draw();
@@ -99,6 +101,7 @@ Good luck!
          * @param  {number} top  The px-position to place baddie at
          */
         moveTo: function(left, top) {
+            console.log("Moving baddie to:", left, top);
             // Change the left and top positions
             this.position.left = left;
             this.position.top = top;
@@ -155,7 +158,7 @@ Good luck!
          * @param  {object} tilearray 2D array of the tiles on the board
          */
         init: function(tilesize, element, tilearray) {
-            console.log("Called with:", tilesize, element, tilearray);
+            console.log("init() for board called with:", tilesize, element, tilearray);
             // -------------------------------------------
             // ASSIGNMENT
             // Transfer parameters to the object properties
@@ -170,6 +173,8 @@ Good luck!
             this.element.style.height = this.tilesize * this.tilearray.length + "px";
             this.element.style.width = this.tilesize * this.tilearray[0].length + "px";
 
+            console.log("Board size set to", this.element.style.width, this.element.style.height);
+
             // Draw the result out
             this.draw();
         },
@@ -177,6 +182,7 @@ Good luck!
          * Creates and adds all the tiles to the board DOM element
          */
         draw: function() {
+            console.log("Drawing out the board with this amount of tiles:", this.tilearray.length, "x", this.tilearray[0].length);
             var tile, i, j;
             // Loop out all the tiles
             for(i = 0; i < this.tilearray.length; i++) {
@@ -247,7 +253,7 @@ Good luck!
          * @param  {object} startPos Object with starting position for baddie as x,y in grid
          */
         init: function(board, baddie, startPos) {
-            console.log("Called with:", board, baddie, startPos);
+            console.log("init() for board called with:", board, baddie, startPos);
             // -------------------------------------------
             // ASSIGNMENT
             // Transfer parameters to the object properties
@@ -270,9 +276,11 @@ Good luck!
          * @param  {number} top  The amount of tile steps to move (-1 moves up)
          */
         moveBaddie: function(left, top) {
+            console.log("Moving baddie on board in these directions:", left, top);
+            var newPos;
             // First - check for collisions in baddies new position
             // What is baddies new position?
-            var newPos = {
+            newPos = {
                 x: this.baddiePos.x + top,
                 y: this.baddiePos.y + left
             };
@@ -312,6 +320,7 @@ Good luck!
          * @return {boolean} False if no collision, true if collision
          */
         collision: function(x, y) {
+            console.log("Checking for collisions at", x, y);
             // Tile collision on tiles: 11, 12
             // Outer wall collide on negative x,y
             // Outer wall collide on x,y bigger than array size
